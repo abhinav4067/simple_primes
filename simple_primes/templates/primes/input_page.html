@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prime Number Finding</title>
+  </head>
+  <body>
+    <h1>Enter a number to find all primes less than or equal to it</h1>
+    <form method="POST" action="{% url 'prime_output' %}">
+      {% csrf_token %}
+      <input type="number" name="number" min="2" required />
+      <button style="background-color:dodgerblue;" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
